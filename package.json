@@ -1,11 +1,11 @@
 {
     "name": "gulp-rev-collector-client",
-    "version": "1.2.2",
+    "version": "1.1.215",
     "description": "Static asset revision data collector from manifests, generated from different streams, and replace their links in html template.",
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/shonny-ua/gulp-rev-collector"
+        "url": "https://github.com/zhangli254804018/gulp-rev-collector-client"
     },
     "author": "li.zhang",
     "main": "index.js",
