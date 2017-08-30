@@ -117,10 +117,12 @@ Default value is:
 
 
 
-- 本插件為個人部分調整代碼適應項目使用,使用前請確認是否適合自己所在項目
-- 該插件依賴為 [gulp-rev-collector](https://www.npmjs.com/package/https://www.npmjs.com/package/gulp-rev-collector)
-- 做出以下調整
+本插件為個人研發調整代碼適應項目使用使用前請確認好該插件依賴為:
 
+
+
+做出以下調整
+- 修改bug
 ```
 var collector = require('gulp-rev-collector-client);
 gulp.task('rev', function() {

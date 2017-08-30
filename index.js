@@ -4,10 +4,11 @@ var gutil = require('gulp-util');
 var PluginError = gutil.PluginError;
 var through = require('through2');
 var path = require('path');
+var objectAssign = require('object-assign');
 
 var PLUGIN_NAME = 'gulp-rev-collector';
 
-var defaults = {
+var defaults = objectAssign({
     hash: false,
     revSuffix: '-[0-9a-f]{8,10}-?',
     extMap: {
@@ -15,7 +16,7 @@ var defaults = {
         '.less': '.css',
         '.jsx': '.js'
     }
-};
+});
 
 function _getManifestData(file, opts) {
     var data;
@@ -38,7 +39,7 @@ function _getManifestData(file, opts) {
                     isRev = 0;
                     return;
                 }
-                let cleanReplacement = defaults.hash ?
+                let cleanReplacement = opts.hash ?
                     path.basename(json[key]).replace(new RegExp(opts.revSuffix), '') :
                     path.basename(json[key]).split('?')[0];
                 if (!~[
